@@ -61,11 +61,8 @@ assign data_BLUE = {8{colorb2}};
 assign data_GREEN = {8{colorc2}};
 
 clkdivled c2(Clk,led_en,backlight); //Enable backlight 43 khz
-
 clkdiv9 c1(pixel_en,Clk,clk_lcd);//9Mhz pixel clk
-
 DE de2(de_en,clk_lcd,DE_clk);//DE clk for hsync and vsync
-
 sync s1(disp_en,DE_clk,en_sync,clk_lcd,flagh, flagv, hcount_reg,Vcount_reg,DISP);
 
 display d1(offset1,rgb_en,clk_lcd, flagv, flagh, data_RED1, data_BLUE1, data_GREEN1, hcount_reg,Vcount_reg);
@@ -76,8 +73,6 @@ display d5(offset5,rgb_en,clk_lcd, flagv, flagh,data_RED5, data_BLUE5, data_GREE
 display d6(offset6,rgb_en,clk_lcd, flagv, flagh, data_RED6, data_BLUE6, data_GREEN6, hcount_reg,Vcount_reg);
 display d7(offset7,rgb_en,clk_lcd, flagv, flagh, data_RED7, data_BLUE7, data_GREEN7, hcount_reg,Vcount_reg);
 display d8(offset8,rgb_en,clk_lcd, flagv, flagh,data_RED8, data_BLUE8, data_GREEN8, hcount_reg,Vcount_reg);
-
-
 display1 d11(offset11,rgb_en,clk_lcd, flagv, flagh, data_RED11, data_BLUE11, data_GREEN11, hcount_reg,Vcount_reg);
 display2 d12(offset12,rgb_en,clk_lcd, flagv, flagh, data_RED12, data_BLUE12, data_GREEN12, hcount_reg,Vcount_reg);
 display1 d13(offset13,rgb_en,clk_lcd, flagv, flagh, data_RED13, data_BLUE13, data_GREEN13, hcount_reg,Vcount_reg);
